@@ -21,7 +21,6 @@ export default defineConfig({
           lang: "zh-CN",
         },
       },
-
       description: "TATEN Team Documentation Hub Website",
       logo: {
         src: "./src/assets/taten-logo.png",
