@@ -1,0 +1,40 @@
+---
+title: TATEN文档站
+description: 计算机科学交流团队——文档站点
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+hero:
+  tagline: 欢迎来到TATEN文档站！
+  image:
+    file: ../../../assets/taten-logo-alpha-200x48.png
+  actions:
+    - text: 示例指南
+      link: /zh-cn/guides/example/
+      icon: right-arrow
+    - text: 阅读 Starlight 文档
+      link: https://starlight.astro.build
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## 后续步骤
+
+<CardGrid stagger>
+  <Card title="更新内容" icon="pencil">
+    编辑 `src/content/docs/index.mdx` 文件，即可看到本页面的变化。
+  </Card>
+  <Card title="更改页面布局" icon="document">
+    在 `src/content/docs/index.mdx` 中删除 `template:
+    splash`，即可在此页面显示侧边栏。
+  </Card>
+  <Card title="添加新内容" icon="add-document">
+    向 `src/content/docs` 目录中添加 Markdown 或 MDX 文件，以创建新页面。
+  </Card>
+  <Card title="配置你的站点" icon="setting">
+    在 `astro.config.mjs` 中编辑 `sidebar` 及其他配置项。
+  </Card>
+  <Card title="阅读文档" icon="open-book">
+    在 [Starlight 官方文档](https://starlight.astro.build/) 中了解更多内容。
+  </Card>
+</CardGrid>

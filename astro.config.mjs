@@ -9,6 +9,18 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "TATEN Doc",
+      defaultLocale: "zh-cn",
+      locales: {
+        // 简体中文文档在 `src/content/docs/zh-cn/` 中。
+        en: {
+          label: "English",
+          lang: "en",
+        },
+        "zh-cn": {
+          label: "简体中文",
+          lang: "zh-CN",
+        },
+      },
       description: "TATEN Team Documentation Hub Website",
       logo: {
         src: "./src/assets/taten-logo.png",
@@ -23,18 +35,39 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Guides",
+          label: "指南",
+          translations: {
+            en: "Guides",
+          },
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
+            {
+              label: "示例指南",
+              translations: {
+                en: "Example Guide",
+              },
+              slug: "guides/example",
+            },
           ],
         },
         {
-          label: "Reference",
+          label: "参考",
+          translations: {
+            en: "Reference",
+          },
           autogenerate: { directory: "reference" },
         },
-        { label: "服务文档", autogenerate: { directory: "services" } },
+        {
+          label: "服务文档",
+          translations: {
+            en: "Service Documentation",
+          },
+          autogenerate: { directory: "services" },
+        },
       ],
+      editLink: {
+        baseUrl: "https://github.com/TATENcn/doc/edit/main/",
+      },
     }),
   ],
 });
