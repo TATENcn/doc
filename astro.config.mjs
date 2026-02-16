@@ -4,8 +4,7 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://doc.taten.org",
-  base: "/",
+  site: "http://doc.taten.org/zh-cn",
   integrations: [
     starlight({
       title: "TATEN Doc",
