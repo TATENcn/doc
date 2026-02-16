@@ -5,22 +5,23 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "http://doc.taten.org",
-  base: "/zh-cn/",
+  base: "/",
   integrations: [
     starlight({
       title: "TATEN Doc",
       defaultLocale: "zh-cn",
       locales: {
-        // 简体中文文档在 `src/content/docs/zh-cn/` 中。
         en: {
           label: "English",
           lang: "en",
         },
+        // 简体中文文档在 `src/content/docs/zh-cn/` 中。
         "zh-cn": {
           label: "简体中文",
           lang: "zh-CN",
         },
       },
+
       description: "TATEN Team Documentation Hub Website",
       logo: {
         src: "./src/assets/taten-logo.png",
